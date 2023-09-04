@@ -1,0 +1,74 @@
+
+.Card {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 16px;
+    padding: 23px 20px;
+    margin-left: 500px;
+    margin-top: 93px;
+    position: relative;
+     height: 200px;
+
+}
+.Action{
+
+    position: absolute;
+    left: 22vw;
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    margin-right: 8px !important;
+}
+
+.airQuality{
+    position: absolute;
+    left: 22vw;
+    top:5vw;
+
+}
+
+.airQualitydata{
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    margin-right: 8px !important;
+
+}
+
+
+
+.wind{
+
+    position: absolute;
+    left: 22vw;
+    top: 8vw;
+    
+
+}
+.windgust{
+    position: absolute;
+    left: 22vw;
+    top: 12vw;
+
+}
+
+.hazy{
+    position: absolute !important;
+    bottom: 0 !important;
+    margin-left: 5% !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+}
+.currenWeather{
+    position: absolute;
+    margin-top: 1px !important ;
+    margin-left: 1px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    text-transform: uppercase !important;
+}
+.moreDetails{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
