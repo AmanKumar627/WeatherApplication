@@ -14,7 +14,8 @@ const initialState = {
   min: '',
   max: '',
   ready: false,
-  convter:"F"
+  convter:"F",
+  airQuality:''
 };
 class Content extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Content extends Component {
         console.log(res)
         const date = new Date(res.DailyForecasts[0].Date);
         const weather = res.DailyForecasts[0].Temperature;
+        const text =res.DailyForecasts[0].Day.IconPhrase;
         const min = weather.Minimum.Value
         const max = weather.Maximum.Value
         this.setState({
@@ -35,6 +37,7 @@ class Content extends Component {
           min,
           max,
           ready: true,
+          airQuality:text
         });
       });
   }
@@ -72,7 +75,7 @@ class Content extends Component {
       <Link href="#" underline="always"   color="inherit"><span> Reel Feel Shade </span><span style={{marginLeft: '50px'}}> 39*C </span> </Link>
       </Typography>
       <Typography className='airQuality'>
-      <Link href="#" underline="always"  color="inherit"><span className="airQualitydata"> Air Quality </span><span style={{marginLeft: '89px'}} underline="always"> Poor </span> </Link>
+      <Link href="#" underline="always"  color="inherit"><span className="airQualitydata"> Air Quality </span><span style={{marginLeft: '20px'}} underline="always">{this.state.airQuality} </span> </Link>
       </Typography>
       <Typography className='wind'>
       <Link href="#" underline="always" color="inherit"> Wind <span underline="always" style={{marginLeft: '89px'}} className=""> WNW 15km/h </span></Link>
